@@ -8,7 +8,7 @@ function userinfo($username,$password){
 }
 function addProject($projectname,$projectdomain,$projectdescription){
     $conn=dbConnection();
-    $sql="INSERT INTO projectinfo VALUES('',$projectname,$projectdomain,$projectdescription)";
+    $sql="INSERT INTO projectinfo VALUES('','$projectname','$projectdomain','$projectdescription')";
     $result=mysqli_query($conn,$sql);
     return $result;
 }
