@@ -37,5 +37,18 @@ function featureName($PID){
     $result=mysqli_query($conn,$sql);
     return $result;
 }
+function featureid($FeatureName){
+    $conn=dbConnection();
+    $sql="SELECT * FROM featureinfo where FeatureName='$FeatureName'";
+    $result=mysqli_query($conn,$sql);
+    $row=mysqli_fetch_assoc($result);
+    return $row;
+}
+function addSpecification($PID,$FID,$specificationname,$description){
+    $conn=dbConnection();
+    $sql="INSERT INTO specificationinfo VALUES('','$PID','$FID','$specificationname','$description')";
+    $result=mysqli_query($conn,$sql);
+    return $result;
+}
 
 ?>
