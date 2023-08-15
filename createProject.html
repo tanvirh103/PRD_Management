@@ -8,18 +8,21 @@
 <body>
     <center>
         <font face="times new roman" size="6">Create Project</font>
+        <br><br>
         <table>
             <form action="project_controller.php" method="post">
             <tr><td>Project Name: </td><td><input type="text" name="projectname"></td></tr>
             <tr><td>Project Domain:</td><td>
                 <select name="domain" id="domain">
+                    <option value="Not set"selected>Select</option>
                     <option value="Management">Management</option>
                     <option value="Machine Learning">Machine Learning</option>
                     <option value="Deep Learning">Deep Learning</option>
                     <option value="Blockchain ">Blockchain</option>
                 </select></td></tr>
                 <tr><td>Project Description:</td><td><textarea name="description" id="" cols="25" rows="5"></textarea></td></tr>
-
+            <tr><td><br></td></tr>
+            <tr align="right"><td><input type="submit" name="submit" value="Create Project"></td></tr>
         </table>
     </form>
     </center>
