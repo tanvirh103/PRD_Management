@@ -5,7 +5,7 @@ if(isset($_POST['submit'])){
     $password=$_POST['password'];
     $result=userinfo($username,$password);
     if(mysqli_num_rows($result)>0){
-        header('location:analyst_dashboard.php');
+        header('location:analyst_dashboard.html');
     }else{
         header('location:wrong.html');
     }
