@@ -31,4 +31,11 @@ function addFeature($PID,$featurename){
     $result=mysqli_query($conn,$sql);
     return $result;
 }
+function featureName($PID){
+    $conn=dbConnection();
+    $sql="SELECT FeatureName FROM featureinfo where PID='$PID'";
+    $result=mysqli_query($conn,$sql);
+    return $result;
+}
+
 ?>
