@@ -6,4 +6,10 @@ function userinfo($username,$password){
     $result=mysqli_query($conn,$sql);
     return $result;
 }
+function addProject($projectname,$projectdomain,$projectdescription){
+    $conn=dbConnection();
+    $sql="INSERT INTO projectinfo VALUES('',$projectname,$projectdomain,$projectdescription)";
+    $result=mysqli_query($conn,$sql);
+    return $result;
+}
 ?>
