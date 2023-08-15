@@ -13,7 +13,7 @@
             <tr><td><a href="createProject.html">Create Your Project</a></td></tr>
             <tr><td><a href="createFeature.html">Create Feature</a></td></tr>
             <tr><td><a href="createSpecification.html">Create Specification</a></td></tr>
-            <tr><td><a href="View_all_projecthtml">View All Project</a></td></tr>
+            <tr><td><a href="View_all_project.html">View All Project</a></td></tr>
             <tr align="right"><td><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="logout.php">Logout</a></td></tr>
         </table>
     </center>
