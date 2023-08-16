@@ -53,5 +53,11 @@ function searchproject($value){
     $result=mysqli_query($conn,$sql);
     return $result;
 }
+function SpecificationSearch($value){
+    $conn=dbConnection();
+    $sql="SELECT * FROM specificationinfo WHERE SpecificationName LIKE'%$value%'";
+    $result=mysqli_query($conn,$sql);
+    return $result;
+}
 
 ?>
