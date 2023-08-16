@@ -44,9 +44,9 @@ function featureid($FeatureName){
     $row=mysqli_fetch_assoc($result);
     return $row;
 }
-function addSpecification($PID,$FID,$specificationname,$description){
+function addSpecification($specificationname,$ScreenDefinition,$UserStory,$AcceptanceCriteria){
     $conn=dbConnection();
-    $sql="INSERT INTO specificationinfo VALUES('','$PID','$FID','$specificationname','$description')";
+    $sql="INSERT INTO specificationinfo VALUES('','$specificationname','$ScreenDefinition','$UserStory','$AcceptanceCriteria')";
     $result=mysqli_query($conn,$sql);
     return $result;
 }
