@@ -47,7 +47,8 @@ $result=SpecificationName();
             </td></tr>
             
     </table>
-    <font name="message" face="times new roman" size="6"></font>
+    <br>
+    <font id="message" face="times new roman" size="6"></font>
     </center>
     
 </body>
