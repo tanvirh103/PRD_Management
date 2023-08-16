@@ -46,5 +46,11 @@ function projectinfo(){
     $result=mysqli_query($conn,$sql);
     return $result;
 }
+function searchproject($value){
+    $conn=dbConnection();
+    $sql="SELECT * FROM projectinfo where ProjectName LIKE'%$value%'";
+    $result=mysqli_query($conn,$sql);
+    return $result;
+}
 
 ?>

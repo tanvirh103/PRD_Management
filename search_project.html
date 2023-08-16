@@ -9,11 +9,11 @@
     <script>
         function search(str){ 
             if(str==""){
-            document.getElementById('message').innerHTML="<tr><td align=\"center\"><font color=\"white\" face=\"times new roman\" size=\"6\">Please Type Title</font><br><br><br>";
+            document.getElementById('message').innerHTML="Please Type Title";
             return;
             }
             let xhttp=new XMLHttpRequest(); 
-            xhttp.open('post','../Controllers/search-controller.php',true);
+            xhttp.open('post','search_project.php',true);
             xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xhttp.send('name='+str);
             xhttp.onload=function(){
@@ -24,9 +24,9 @@
     <center>
         <font face="times new roman" size="8">Search Project</font>
         <br><br>
+        <input type="text" id="livesearch" onkeyup="search(this.value)" placeholder="Enter your Project Name" size="100px">
+        <br><br>
+        <h4 id="message"></h4>
     </center>
-    <table align="center">
-        <tr><td><input type="text" id="livesearch" onkeyup="search(this.value)" name="title" placeholder="Enter your Project Name" size="100px"></td></tr>
-    </table>
 </body>
 </html>
