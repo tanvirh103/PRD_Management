@@ -12,12 +12,7 @@ function addProject($projectname,$projectdomain,$projectdescription){
     $result=mysqli_query($conn,$sql);
     return $result;
 }
-function projectname(){
-    $conn=dbConnection();
-    $sql="SELECT ProjectName FROM projectinfo";
-    $result=mysqli_query($conn,$sql);
-    return $result;
-}
+
 function projectid($ProjectName){
     $conn=dbConnection();
     $sql="SELECT * FROM projectinfo where ProjectName='$ProjectName'";
@@ -31,9 +26,9 @@ function addFeature($featurename){
     $result=mysqli_query($conn,$sql);
     return $result;
 }
-function featureName($PID){
+function featureName(){
     $conn=dbConnection();
-    $sql="SELECT FeatureName FROM featureinfo where PID='$PID'";
+    $sql="SELECT FeatureName FROM featureinfo";
     $result=mysqli_query($conn,$sql);
     return $result;
 }
@@ -47,6 +42,13 @@ function featureid($FeatureName){
 function addSpecification($specificationname,$ScreenDefinition,$UserStory,$AcceptanceCriteria){
     $conn=dbConnection();
     $sql="INSERT INTO specificationinfo VALUES('','$specificationname','$ScreenDefinition','$UserStory','$AcceptanceCriteria')";
+    $result=mysqli_query($conn,$sql);
+    return $result;
+}
+
+function SpecificationName(){
+    $conn=dbConnection();
+    $sql="SELECT SpecificationName FROM specificationinfo";
     $result=mysqli_query($conn,$sql);
     return $result;
 }
