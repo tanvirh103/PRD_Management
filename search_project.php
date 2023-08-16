@@ -14,7 +14,7 @@ if(mysqli_num_rows($result) > 0) {
         <tr><td>Project Name: </td><td>{$ProjectName}</td></tr>
         <tr><td>Feature Name: </td><td>{$FeatureName}</td></tr>
         <tr><td>Specification Name: </td><td>{$SpecificationName}</td></tr>
-        </table><br><br>";
+        </table><br>";
         
     }
 }else{
