@@ -4,7 +4,8 @@ function userinfo($username,$password){
     $conn=dbConnection();
     $sql="select * from userinfo where userName='$username' and password='$password'";
     $result=mysqli_query($conn,$sql);
-    return $result;
+    $row = mysqli_fetch_assoc($result);
+    return $row;
 }
 function addProject($projectname,$featurearray,$Specificationarray){
     $conn=dbConnection();
