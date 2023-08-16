@@ -4,22 +4,20 @@ if(isset($_POST['submit'])){
     $projectname=$_POST['projectname'];
     $Featurelist=$_POST['Featurelist'];
     $SpecificationList=$_POST['SpecificationList'];
-
-    // $result=addProject($projectname,$projectdomain,$projectdescription);
-    // if($result){
-    //     echo"<font face=\"times new roman\" size=\"6\">Congratulations New Project Has been added</font>";
-    // }else{
-    //     echo"<font face=\"times new roman\" size=\"6\">Failed! Please try again</font>";
-    // }
-    foreach( $Featurelist as $feature){
-        $featurearray[]=$feature;
+    $featurearray="";
+    $Specificationarray="";
+    foreach($Featurelist as $feature){
+       $featurearray.=$feature.",";
     }
-    foreach( $SpecificationList as $Specification){
-        $Specificationarray[]=$Specification;
+    foreach($SpecificationList as $Specification){
+        $Specificationarray.=$Specification.",";
     }
-    //echo $projectname,$Featurelist,$SpecificationList;
-    print_r($featurearray);
-    print_r($Specificationarray);
+    $result=addProject($projectname,$featurearray,$Specificationarray);
+    if($result){
+        echo"<font face=\"times new roman\" size=\"6\">Congratulations New Project Has been added</font>";
+    }else{
+        echo"<font face=\"times new roman\" size=\"6\">Failed! Please try again</font>";
+    }
 }
 
 ?>

@@ -13,7 +13,6 @@ $result1=SpecificationName();
 <body>
     <center>
         <font face="times new roman" size="6">Create Project</font>
-        <br><br>
         <table>
             <form action="project_controller.php" method="post">
             <tr><td>Project Name: </td><td><input type="text" name="projectname"></td></tr>
@@ -25,6 +24,7 @@ $result1=SpecificationName();
                 foreach($option as $option){
                     ?>
                    <td><input type="checkbox" name="Featurelist[]" value="<?php echo $option['FeatureName']?>"><?php echo $option['FeatureName'];?></td>
+                   <tr><br></tr>
                     <?php
                 }
             }else{
@@ -33,14 +33,15 @@ $result1=SpecificationName();
         
             ?>
             </tr>
-            <tr><td>List of Specification: </td></tr>
+            <tr ><td>List of Specification: </td></tr>
             <tr>
             <?php
              if(mysqli_num_rows($result1)>0){
                 $option1=mysqli_fetch_all($result1,MYSQLI_ASSOC);
                 foreach($option1 as $option1){
                     ?>
-                   <td><input type="checkbox" name="SpecificationList[]" value="<?php echo $option1['SpecificationName']?>"><?php echo $option1['SpecificationName']."<br>";?></td>
+                   <td><input type="checkbox" name="SpecificationList[]" value="<?php echo $option1['SpecificationName']?>"><?php echo $option1['SpecificationName'];?></td>
+                   <tr><br></tr>
                     <?php
                 }
             }else{
