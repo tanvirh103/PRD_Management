@@ -27,6 +27,8 @@ $result1=SpecificationName();
                    <td><input type="checkbox" name="Featurelist"><?php echo $option['FeatureName'];?><br></td>
                     <?php
                 }
+            }else{
+                echo "<tr><td>No Feature Found</td></tr>";
             }
         
             ?>
@@ -41,6 +43,8 @@ $result1=SpecificationName();
                    <td><input type="checkbox" name="SpecificationList"><?php echo $option1['SpecificationName'];?></td>
                     <?php
                 }
+            }else{
+                echo "<tr><td>No Specification Found</td></tr>";
             }
             ?> 
             </tr>
