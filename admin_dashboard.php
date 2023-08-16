@@ -1,3 +1,9 @@
+<?php
+require_once('user_model.php');
+$result=countProject();
+$result1=countFeature();
+$result2=countanalyst();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +13,11 @@
 </head>
 <body>
     <center>
-    <font face="times new roman" size="6">Admin Dashboard</font>
-    <br><br>
+    <font face="times new roman" size="10">Admin Dashboard</font>
+    <br><br><br>
+    <font face="times new roman" size="6">Total Project: <?php echo $result["totalnumber"] ?></font><br>
+    <font face="times new roman" size="6">Total Feature: <?php echo $result1["totalfeature"] ?></font><br>
+    <font face="times new roman" size="6">Total Analyst: <?php echo $result2["totalanalyst"] ?></font><br><br><br>
     <table>
             <tr><td><a href="View_all_project.php">View All Project</a></td></tr>
             <tr><td><a href="search_project.html">Search Project</a></td></tr>

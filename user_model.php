@@ -59,5 +59,27 @@ function SpecificationSearch($value){
     $result=mysqli_query($conn,$sql);
     return $result;
 }
+function countProject(){
+    $conn=dbConnection(); 
+    $sql="SELECT COUNT(*) as totalnumber FROM projectinfo";
+    $result=mysqli_query($conn,$sql);
+    $row = mysqli_fetch_assoc($result);
+    return $row;
+}
+function countFeature(){
+    $conn=dbConnection(); 
+    $sql="SELECT COUNT(*) as totalfeature FROM featureinfo";
+    $result=mysqli_query($conn,$sql);
+    $row = mysqli_fetch_assoc($result);
+    return $row;
+}
+
+function countanalyst(){
+    $conn=dbConnection(); 
+    $sql="SELECT COUNT(*) as totalanalyst FROM userinfo WHERE Role='Analyst'";
+    $result=mysqli_query($conn,$sql);
+    $row = mysqli_fetch_assoc($result);
+    return $row;
+}
 
 ?>
