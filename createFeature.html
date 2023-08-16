@@ -1,7 +1,3 @@
-<?php
-require_once('user_model.php');
-$result=projectname();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,29 +6,13 @@ $result=projectname();
     <title>Create Feature</title>
 </head>
 <body>
-    <?php
-     if(mysqli_num_rows($result)>0){
-        $option=mysqli_fetch_all($result,MYSQLI_ASSOC);
-     }
-    ?>
     <center>
         <font face="times new roman" size="6">Create Feature</font>
         <br><br>
         <form action="feature_controller.php" method="post">
         <table>
-            <tr><td>Project Name: </td>
-            <td><select name="ProjectName">
-                <option selected>Select Project Name</option>
-                <?php
-                foreach($option as $option){
-                    ?>
-                    <option><?php echo $option['ProjectName']; ?></option>
-                    <?php
-                }
-                ?>
-            </select></td>
-        </tr>
             <tr><td>Feature Name: </td><td><input type="text" name="featurename"></td></tr>
+            <tr><td><br></td></tr>
             <tr align="right"><td><input type="submit" name="submit" value="Create Feature"></td></tr>
         </table>
     </form>

@@ -25,9 +25,9 @@ function projectid($ProjectName){
     $row=mysqli_fetch_assoc($result);
     return $row;
 }
-function addFeature($PID,$featurename){
+function addFeature($featurename){
     $conn=dbConnection();
-    $sql="INSERT INTO featureinfo VALUES('','$PID','$featurename')";
+    $sql="INSERT INTO featureinfo VALUES('','$featurename')";
     $result=mysqli_query($conn,$sql);
     return $result;
 }
