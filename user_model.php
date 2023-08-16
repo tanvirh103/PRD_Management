@@ -28,9 +28,9 @@ function featureName(){
     return $result;
 }
 
-function addSpecification($specificationname,$ScreenDefinition,$UserStory,$AcceptanceCriteria){
+function addSpecification($specificationname,$ScreenDefinition,$UserStory,$AcceptanceCriteria,$fileName){
     $conn=dbConnection();
-    $sql="INSERT INTO specificationinfo VALUES('','$specificationname','$ScreenDefinition','$UserStory','$AcceptanceCriteria')";
+    $sql="INSERT INTO specificationinfo VALUES('','$specificationname','$ScreenDefinition','$UserStory','$AcceptanceCriteria','$fileName')";
     $result=mysqli_query($conn,$sql);
     return $result;
 }

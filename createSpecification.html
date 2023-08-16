@@ -9,13 +9,13 @@
     <center>
         <font face="times new roman" size="6">Create Specification</font>
         <br><br>
-        <form action="specification_controller.php" method="post">
+        <form action="specification_controller.php" method="post" enctype="multipart/form-data">
             <table>
                 <tr><td>Specification Role: </td><td><input type="text" name="specificationname" size="29 "></td></tr>
                 <tr><td>Screen Definition: </td><td><textarea name="ScreenDefinition" cols="30" rows="5"></textarea></td></tr>
                 <tr><td>User Story: </td><td><textarea name="UserStory"  cols="30" rows="5"></textarea></td></tr>
                 <tr><td>Acceptance Criteria: </td><td><textarea name="AcceptanceCriteria" cols="30" rows="5"></textarea></td></tr>
-                <tr><td>UI Screen:</td><td><input type="file" name="picture"></td></tr>
+                <tr><td>UI Screen:</td><td><input type="file" name="myfile" accept=".png,.jpg,.jpeg"></td></tr>
                 <tr><td><br></td></tr>
                 <tr align="right"><td><input type="submit" name="submit" value="Create Specification"></td></tr>
                 <tr align="right"><td><a href="Advance.php">Advance Specification</a></td></tr>

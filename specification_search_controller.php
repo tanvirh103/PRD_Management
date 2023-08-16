@@ -10,6 +10,7 @@ if(mysqli_num_rows($result) > 0) {
         $sd=$row["ScreenDefinition"];
         $us=$row["UserStory"];
         $ac=$row["AcceptanceCriteria"];
+        $pic=$row["picture"];
         echo"
         <tr><td>Specification ID</td>
         <td>Specification Name</td>
@@ -21,9 +22,12 @@ if(mysqli_num_rows($result) > 0) {
             <td>$sn</td>
             <td>$us</td>
             <td>$ac</td>
+            <td><img src=\"$pic\" width=\"350px\"></td>
         </tr>";
         
     }
    echo" </table>";
+}else{
+    echo "No Details Found";
 }
 ?>

@@ -24,15 +24,16 @@ $result1=SpecificationName();
                 foreach($option as $option){
                     ?>
                    <td><input type="checkbox" name="Featurelist[]" value="<?php echo $option['FeatureName']?>"><?php echo $option['FeatureName'];?></td>
-                   <tr><br></tr>
+                   </tr>
                     <?php
+                    
                 }
             }else{
                 echo "<tr><td>No Feature Found</td></tr>";
             }
         
             ?>
-            </tr>
+            
             <tr ><td>List of Specification: </td></tr>
             <tr>
             <?php
