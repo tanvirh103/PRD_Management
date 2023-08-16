@@ -40,7 +40,7 @@ $result1=SpecificationName();
                 $option1=mysqli_fetch_all($result1,MYSQLI_ASSOC);
                 foreach($option1 as $option1){
                     ?>
-                   <td><input type="checkbox" name="SpecificationList[]" value="<?php echo $option1['SpecificationName']?>"><?php echo $option1['SpecificationName'];?></td>
+                   <td><input type="checkbox" name="SpecificationList[]" value="<?php echo $option1['SpecificationName']?>"><?php echo $option1['SpecificationName']."<br>";?></td>
                     <?php
                 }
             }else{
